@@ -20,4 +20,4 @@
 	then, go to <a href='localhost:3000'>localhost:3000</a>
 </p>
 
-<p>Visit my working demo at <a href="https://private-message-board.herokuapp.com/">https://private-message-board.herokuapp.com/</a>
+<p>Visit my working demo at <a href="https://private-message-board.herokuapp.com/">https://private-message-board.herokuapp.com/</a> and try the code jointheclub</p>
