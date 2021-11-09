@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	form(action='/user/login', method='POST')
+		div(class='margin-top-1')
+			label(for='username') Username:
+			br
+			input(type='text', name='username', placeholder='Enter username' value=prev_username)
+		div(class='margin-top-1')
+			label(for='password') Password:
+			br
+			input(type='password' name='password', placeholder='Enter password')
+		div(class='margin-top-1')
+			input(type='submit' value='Log in' class='button')
+
+	if errors
+		ul(class='margin-top-1')
+		for error in errors
+			li(class='error')=error.msg

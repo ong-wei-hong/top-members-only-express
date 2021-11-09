@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	if user
+		form(action='/message/create' method='POST' class='border margin-top-1')
+			h3(class='bold') Send a message
+			div(class='margin-top-1')
+				label(for='text') Message:
+				input(type='text', name='text', placeholder='Say something' class='margin-left-1')
+			div(class='margin-top-1')
+				input(type='submit' value='Send message' class='button')
+	h3(class='bold margin-top-1') Messages
+	for message in messages
+		div(class='message margin-top-1')
+			p=message.text
+			if(user && user.club)
+				p(class='italic')=`~ ${message.user.username}`
+			p(class='small-font')=`Sent at: ${message.datetime}`

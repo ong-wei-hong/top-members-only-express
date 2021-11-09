@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	p(class='margin-top-1') Members of the club would be able to see who posted messages
+	form(action='/user/join' method='POST')
+		div(class='margin-top-1')
+			label(for='code') Enter code:
+			input(type='text' name='code' placeholder='Enter code' class='margin-left-1')
+		div(class='margin-top-1')
+			input(type='submit' value='Join' class='button')

@@ -1,0 +1,29 @@
+doctype html
+html
+	head
+		title= 'Private Message ' + title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		header(class='header')
+			div(class='wrapper flex-space-between align-center')
+				a(href='/message'): h1 Message Board
+				div(class='right')
+					if user
+						if !user.club
+							a(href='/user/join' class='button') Join the club
+						a(href='/user/logout' class='button margin-left-1') Logout
+					else
+						a(href='/user/signup' class='button') Sign up
+						a(href='/user/login' class='button margin-left-1') Login
+			if alert
+				div(class='alert')
+					div(class='flash-wrapper')
+						p=alert
+			if notice
+				div(class='notice')
+					div(class='flash-wrapper')
+						p=notice
+
+		main(class='wrapper')
+			h2(class='bold')=title
+			block content
